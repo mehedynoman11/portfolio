@@ -3,14 +3,15 @@ body{
   text-align: center;
   font-family: verdana, sans-serif;
   background-color: #e2fff6;
-  font-size: 100%;
+
 }
 
 h1{
   color: #1450A3;
-  font-size: 5.625rem;
+  font-size: 4rem;
   margin-top: 50px auto 0 auto;
-  font-family: verdana, sans-serif;
+  font-family: monospace, sans-serif;
+  letter-spacing: 6px;
 }
 
 h2{
@@ -67,10 +68,28 @@ a{
 
 .top-cloud {
   position: absolute;
-  right: 5%;
-  top: 5%;
+  right: -20%; /* Start the image off-screen to the right */
+  top: 1%;
   max-width: 100%;
+  animation: slideIn 2s ease-in-out forwards; /* Use a CSS animation */
 }
+
+@keyframes slideIn {
+  to {
+    right: 5%; /* Final position of the image */
+  }
+}
+
+@media(max-width: 1028px){
+.top-cloud {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 25%;
+    animation: slideIn 2s ease-in-out forwards;
+  }
+}
+
 
 
 .middle-cloud {
@@ -78,16 +97,18 @@ a{
   left: 5%; 
   bottom: 37%; 
   max-width: 100%;
+  transform: rotate(-28deg);
 }
 
-@media (max-width:1028px) {
+@media (max-width:1050px) {
   .middle-cloud {
     position: absolute;
     left: 5%;
     bottom: 26%;
-    max-width: 100%;
+    max-width: 30%;
 }
 }
+
 
 
 .profile{
@@ -104,15 +125,15 @@ a{
   line-height: 2;
 }
 
-.profile-img{
+.profile-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   border: 4px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-
 }
+
 
 .image1{
   width: 25%;
