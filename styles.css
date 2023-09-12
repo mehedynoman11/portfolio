@@ -3,12 +3,12 @@ body{
   text-align: center;
   font-family: verdana, sans-serif;
   background-color: #e2fff6;
-
+  font-size: 100%;
 }
 
 h1{
   color: #1450A3;
-  font-size: 4rem;
+  font-size: 5.625rem;
   margin-top: 50px auto 0 auto;
   font-family: verdana, sans-serif;
 }
@@ -42,6 +42,7 @@ h3{
   background: radial-gradient(circle, rgba(9,9,140,1) 0%, rgba(13,25,68,1) 100%); */
   background-color: #183D3D;
   padding: 50px 0 30px;
+  margin: auto;
 
 }
 
@@ -63,22 +64,31 @@ a{
   border-radius: 5px;
 }
 
-.top-cloud{
+
+.top-cloud {
   position: absolute;
-  right: 125px;
-  top: 48px;
+  right: 5%;
+  top: 5%;
+  max-width: 100%;
 }
 
-.middle-cloud{
+
+.middle-cloud {
   position: absolute;
-  left: 157px;
-  bottom: 268px;
-  }
+  left: 5%; 
+  bottom: 37%; 
+  max-width: 100%;
 }
 
-div{
-  margin: 100px;
+@media (max-width:1028px) {
+  .middle-cloud {
+    position: absolute;
+    left: 5%;
+    bottom: 26%;
+    max-width: 100%;
 }
+}
+
 
 .profile{
   margin: 100px auto;
